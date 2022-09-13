@@ -1,0 +1,466 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(0, 0, 0);
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.939);
+    position: fixed;
+    width: 100%;
+}
+
+.header li {
+    list-style: none;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    padding: 0 24px;
+    justify-content: space-between;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links{
+    transition: all 0.7s ease;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.nav-links:hover {
+    color: limegreen;
+    transform: rotate(3deg);
+}
+
+
+.title {
+    padding-left: 2%;
+    font-weight: 900;
+}
+
+.title a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s ease-out;
+}
+
+.title a:hover {
+     color:rgb(219, 42, 42);
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+
+@media (max-width:768px){
+    .hamburger{
+        display: block;
+    }
+
+    /* .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    } */
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.939);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    } 
+    .nav-menu.activate {
+        left: 0;
+    }
+}
+
+/*============================================(main)===========================================*/
+
+.main {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4,9,30,0.7)),url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    /* position: relative; */
+    height: 100vh;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+}
+
+.text-box{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: space-between;
+}
+
+.text-box h1 {
+    font-size: 4.5rem;
+    font-family: 'Rubik Dirt', cursive;
+    color: goldenrod;
+    align-self: center;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 18px;
+    background: transparent;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 30%;
+}
+
+.boton:hover {
+   background: rgba(229, 231, 64, 0.65);
+    border: 1px solid rgba(229, 231, 64, 0.65);
+    transition: 1.5s;
+}
+
+/*========================================(Hot Brands)============================================================*/
+
+.hotbrands {
+    width: 100%;
+    /* margin-bottom: 80px; */
+    text-align: center;
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.939);
+}
+
+.hotbrands h1 {
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 5% 0% 7%;
+    flex-wrap: wrap;
+    height: 100%;
+    }
+
+.hotbrands img {
+    width: 300px;
+    cursor: pointer;
+}
+
+
+.cars1 {
+    flex-basis: 32%;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.35),rgba(4, 9, 30, 0.224)),url(images/supracar.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cars2 {
+    flex-basis: 32%;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.35),rgba(4, 9, 30, 0.224)),url(images/nissancar.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cars3 {
+    flex-basis: 32%;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.35),rgba(4, 9, 30, 0.224)),url(images/mazdacar.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.cars1:hover {
+    box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.444);
+    transition: 0.5s;
+}
+
+.cars2:hover {
+    box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.444);
+    transition: 0.5s;
+}
+
+.cars3:hover {
+    box-shadow: 0 0 20px 0px rgba(255, 255, 255, 0.444);
+    transition: 0.5s;
+}
+
+.adv {
+    color: rgba(129, 127, 127, 0.686);
+}
+
+/*=======================================(Info)=========================================================*/
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(100, 100, 100);
+    background-size: cover;
+}
+
+
+.info {
+    width: 70%;
+    position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    text-align: center;
+    margin: 100px 0 20px 0;
+    background-color: rgba(0, 0, 0, 0.865);
+    border-radius: 25px;
+}
+
+.info:hover {
+    box-shadow: 0 0 20px 0px rgba(252, 0, 0, 0.444);
+    transition: 0.5s;
+}
+
+.text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-color: rgb(191, 186, 186);
+}
+
+.text h1 {
+    margin: 20px 0 20px 0;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.text h1:hover {
+    color: rgb(60, 85, 99);
+    transform: rotate(3deg);
+}
+
+.info p {
+    margin: 5% 20px 10% 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 800;
+    color: white;
+    width: 50%;
+    align-self: center;
+}
+
+.info video {
+    width: 75%;
+    align-self: center;
+    border-radius: 20px;
+    margin-bottom: 5%;
+}
+/*==============================(logos)=======================================*/
+
+.logos {
+    background-color: rgb(191, 186, 186);
+}
+
+.col-5 {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    margin: 10px 10px 10px 10px;
+}
+
+.col-5 img {
+    width: 150px;
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+.col-5 img:hover {
+    filter: grayscale(0)
+}
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+/* ===================================(About)============================================== */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10% 5% 5% 5%;
+    background-color: black;
+}
+
+.about img {
+    width: 90%;
+    margin: 30px 0 30px 0;
+}
+
+.about h1 {
+    color: #fff;
+    margin: 20px 0 20px 0;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.about h1:hover {
+    color: rgb(60, 85, 99);
+    transform: rotate(3deg);
+}
+
+.about p {
+    color: #fff;
+    margin: 30px 50px 30px 50px;
+    font-size: 1.50rem;
+    line-height: 1.7;
+}
+
+@media (max-width:768px) {
+    .about {
+        margin-top: 25%;
+    }
+}
+/* ===================================(Contact)=========================================== */
+
+.contain {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.35),rgba(4, 9, 30, 0.224)),url(images/contactBack.jpeg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    /* position: relative; */
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.67);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    
+}
+
+form h3 {
+    color: #555;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background-color: #f5f5f5bc;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #ff5361;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+}
+
+.icon img {
+    width: 30px;
+}
+
+.iconn img {
+    width: 20px;
+}
+
+.iconnn img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+/* ===================================(Footer)===================================== */
+
+.footer h2 {
+    color: #fff;
+    text-align: center;
+    margin: 30px 0 30px 0;
+    font-size: 1.25rem
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
+    <title>Contact</title>
+    <link rel="icon" type="images/png" href="images/favicon.ico"/>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <H1 class="title"><a href="index.html">JDM LEGENDS</a></H1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-links" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-links" href="contact.html">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+                 <span class="bar"></span>
+             </div>
+        </nav>
+    </div>
+    <div class="contain">
+        <form onsubmit="sendEmail(); reset(); return false;" action="https://formsubmit.co/veras.cristhian01@icloud.com" method="POST">
+            <h3>Get In Touch</h3>
+            <input type="text" placeholder="Name" id="Name" required>
+            <input type="email" placeholder="Email" id="Email" required>
+            <input type="number" placeholder="Phone Number (Opcional)" id="Phone">
+            <textarea placeholder="How Can I Help You?" id="Message" rows="4"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
